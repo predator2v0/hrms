@@ -1,0 +1,298 @@
+/* custom fonts  */
+@font-face {
+    font-family: "akhand";
+    src: url("../fonts/akhand.otf");
+    font-weight: normal;
+    font-size: medium;
+}
+/* main content css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* preloader */
+body {
+    color: #636e72;
+    font-family: "Epilogue", sans-serif;
+}
+/* welcome section starts */
+.welcome-section {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #fc5c65;
+}
+.navbar-brand {
+    font-family: "akhand", "sans-serif";
+    font-weight: bold;
+    font-size: 30px;
+    color: #f9f7f7 !important;
+}
+.nav-item a {
+    color: #f9f7f7 !important;
+    font-weight: 500;
+    font-family: "Epilogue", sans-serif;
+}
+.signup {
+    margin-left: 3px;
+    border-radius: 3px;
+}
+.signup a {
+    color: #000 !important;
+}
+.main-content {
+    padding: 20px 15px 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    background-image: url(../img/background/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.main-text {
+    font-family: "akhand", "sans-serif";
+    font-weight: bold;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30% auto 0;
+    padding: 20px 10px;
+    color: #2d3436;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+    padding: 15px 15px;
+}
+.login-form form {
+    width: 75%;
+    height: 350px;
+    margin: 20% auto 0;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+.login-form form h3 {
+    font-family: "akhand", "sans-serif";
+    font-size: 30px;
+    font-weight: bold;
+    color: #dddddd;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login-form form input {
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #dddddd;
+    outline: none;
+    color: #f9f7f7;
+    padding-left: 5px;
+}
+.login-form form input::placeholder {
+    color: #f9f7f7;
+}
+.login-form form #login-btn {
+    background-color: transparent;
+    color: #dddddd;
+    margin: 20px auto;
+    padding: 0;
+    width: 90%;
+
+    font-weight: 500;
+    border-radius: 3px;
+    border: 2px solid #fc5c65;
+}
+.login-form form #login-btn:hover {
+    background-color: #fc5c65;
+    transition-duration: 1s;
+}
+/* welcome section ends */
+.property-selection {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background-color: #f4f9f9;
+    justify-content: center;
+    align-items: center;
+}
+.section-heading {
+    font-family: "akhand", "sans-serif";
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px auto;
+    text-align: center;
+    color: #2d3436;
+}
+.property-type-selection {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10vh 10vw;
+}
+.property-type-selection div {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+.property-title {
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+    font-family: "Epilogue", sans-serif;
+}
+.our-vision {
+    width: 100%;
+    height: auto;
+    background-color: #e2f3f5;
+    padding: 30px 20px;
+}
+.easy-access {
+    width: 60%;
+    margin: 40px auto;
+    padding: 2%;
+}
+.easy-access-img {
+    height: 20%;
+    width: 20%;
+    float: left;
+    margin-right: 15px;
+}
+.easy-access-heading {
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+}
+.easy-access-text {
+    font-family: "Epilogue", sans-serif;
+}
+.cheap-price {
+    width: 60%;
+    margin: 40px auto;
+    padding: 2%;
+}
+.cheap-price-img {
+    height: 20%;
+    width: 20%;
+    float: right;
+    margin-left: 15px;
+}
+.cheap-price-heading {
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+}
+.cheap-price-text {
+    font-family: "Epilogue", sans-serif;
+}
+.sustainable-platform {
+    width: 60%;
+    margin: 40px auto;
+    padding: 2%;
+}
+.sustainable-platform-img {
+    height: 20%;
+    width: 20%;
+    float: left;
+    margin-right: 15px;
+}
+.sustainable-platform-heading {
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+}
+.sustainable-platform-text {
+    font-family: "Epilogue", sans-serif;
+}
+.about-us {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background-color: #f4f9f9;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-text {
+    width: 60%;
+    margin: 40px auto;
+    text-align: justify;
+}
+.contact-us {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background-color: #e2f3f5;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us-form {
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+}
+.contact-us-form form {
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+.contact-name,
+.contact-email,
+.contact-text,
+.send-message-btn {
+    width: 85%;
+    margin: 10px auto;
+    padding: 12px 18px;
+    border: 1px solid #636e72;
+    border-radius: 8px;
+}
+.contact-us-form form div label {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #2d3436;
+}
+.contact-us-form form div input,
+.contact-us-form form div textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+.send-message-btn {
+    display: block;
+    margin: 20px auto 10px;
+    background: #fc5c65;
+    padding: 10px 0;
+    text-align: left;
+}
+.send-message-btn input {
+    color: #dddddd;
+    text-transform: uppercase;
+}
+.footer {
+    width: 100%;
+    height: 350px;
+    background-color: #fc5c65;
+}
+/* font resources */
+/* font-family: 'Epilogue', sans-serif;
+font-family: 'Roboto', sans-serif; */
+/* color resources */
+/* 
+#c5e3f6 
+#FD7272
+*/

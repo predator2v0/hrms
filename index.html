@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>House Rental Management System</title>
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+        <!-- bootstrap css CDN included -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <!-- fonts CDN included -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Epilogue&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <!-- custom CSS files included -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- welcome section begins -->
+        <section class="welcome-section">
+            <header>
+                <!-- navbar section begins -->
+                <nav class="navbar navbar-expand-md">
+                    <div class="container">
+                        <a
+                            href="#"
+                            class="navbar-brand text-dark font-weight-bold"
+                            >CustomCastle</a
+                        >
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapsenav"
+                        >
+                            <span>
+                                <img
+                                    src="img/menuHamburger.svg"
+                                    width="35px"
+                                    height="35px"
+                                    alt="menu-hamberger-icon"
+                                />
+                            </span>
+                        </button>
+                        <div
+                            class="collapse navbar-collapse text-center"
+                            id="collapsenav"
+                        >
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a href="#home" class="nav-link text-dark"
+                                        >home</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#about" class="nav-link text-dark"
+                                        >about us</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        href="#contact"
+                                        class="nav-link text-dark"
+                                        >contact us</a
+                                    >
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a href="#login" class="nav-link text-dark"
+                                        >login</a
+                                    >
+                                </li> -->
+                                <li class="nav-item signup">
+                                    <a
+                                        href="#register"
+                                        class="nav-link text-dark"
+                                        >register</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- navbar ends -->
+            </header>
+            <!-- main content begins -->
+            <div class="main-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-10 col-12">
+                            <div class="main-text">
+                                <p>
+                                    find your dream house <br />
+                                    <span>in a affordable price</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-10 col-12">
+                            <div class="login-form">
+                                <form action="#" method="post">
+                                    <h3>Login</h3>
+                                    <input
+                                        type="text"
+                                        name="uid"
+                                        placeholder="Username"
+                                    /><br />
+                                    <input
+                                        type="password"
+                                        name="pass"
+                                        id=""
+                                        placeholder="Password"
+                                    /><br />
+                                    <input
+                                        type="submit"
+                                        value="Login"
+                                        id="login-btn"
+                                    /><br />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main content header ends -->
+        </section>
+        <!-- welcome section ends -->
+        <!-- property type selection -->
+        <section class="property-selection">
+            <h1 class="section-heading">we offer</h1>
+            <div class="property-type-selection">
+                <div class="apartment">
+                    <img
+                        class="img-fluid"
+                        src="img/apartment.jpg"
+                        alt="apartment"
+                    />
+                    <p class="property-title">apartment</p>
+                </div>
+                <div class="house">
+                    <img
+                        class="img-fluid"
+                        src="img/house.jpg"
+                        alt="independent-house"
+                    />
+                    <p class="property-title">house</p>
+                </div>
+                <div class="hostel">
+                    <img class="img-fluid" src="img/hostel.jpg" alt="hostel" />
+                    <p class="property-title">hostle</p>
+                </div>
+                <div class="office">
+                    <img class="img-fluid" src="img/office.jpg" alt="office" />
+                    <p class="property-title">office</p>
+                </div>
+                <div class="shop">
+                    <img class="img-fluid" src="img/shop.jpg" alt="shop" />
+                    <p class="property-title">shop</p>
+                </div>
+            </div>
+        </section>
+        <!-- our vision section starts -->
+        <section class="our-vision">
+            <h1 class="section-heading">our vision</h1>
+            <div class="easy-access">
+                <img class="easy-access-img" src="img/icon.png" alt="demo" />
+                <h3 class="easy-access-heading">easy access</h3>
+                <p class="easy-access-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium porro odit nam mollitia rem debitis perferendis
+                    quas ipsum nostrum enim!
+                </p>
+            </div>
+            <div class="cheap-price">
+                <img class="cheap-price-img" src="img/icon.png" alt="" />
+                <h3 class="cheap-price-heading">cheapest price</h3>
+                <p class="cheap-price-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolor natus, esse unde earum dignissimos cumque, ab placeat
+                    error, odit eaque ratione necessitatibus. Aspernatur
+                    excepturi blanditiis quos a omnis nihil incidunt.
+                </p>
+            </div>
+            <div class="sustainable-platform">
+                <img
+                    class="sustainable-platform-img"
+                    src="img/icon.png"
+                    alt=""
+                />
+                <h3 class="sustainable-platform-heading">
+                    sustainable platform
+                </h3>
+                <p class="sustainable-platform-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem nesciunt dolore pariatur soluta quasi error
+                    dolores, accusamus nobis odio at ducimus tempora! Impedit,
+                    provident harum.
+                </p>
+            </div>
+        </section>
+        <section class="about-us">
+            <h1 class="section-heading">about us</h1>
+            <p class="about-us-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                reprehenderit, asperiores sit quo vero cupiditate illo rerum
+                voluptates, neque eligendi repellat quam minus veniam assumenda
+                velit. Dicta suscipit provident non quas similique, porro quos
+                eos esse quo excepturi nostrum minima soluta alias molestiae
+                consectetur aliquam, ullam perferendis veniam. Cum, sunt. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Velit
+                temporibus labore beatae porro iste aspernatur tempora sed
+                itaque, doloribus nostrum fuga possimus veritatis laboriosam
+                iure aliquam saepe voluptatem officiis ab molestiae in eos,
+                obcaecati voluptatibus laudantium. Corrupti inventore, harum
+                amet reiciendis voluptates iusto repudiandae neque debitis
+                consequuntur. Iure, ab eum.
+            </p>
+        </section>
+        <section class="contact-us">
+            <h1 class="section-heading">contact us</h1>
+            <div class="contact-us-form">
+                <form action="contact.php" method="GET">
+                    <div class="contact-name">
+                        <label>name:</label>
+                        <input type="text" />
+                    </div>
+                    <div class="contact-email">
+                        <label>email:</label>
+                        <input type="email" />
+                    </div>
+                    <div class="contact-text">
+                        <label>your message:</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="send-message-btn">
+                        <input type="submit" value="send" />
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="footer"></section>
+        <!-- scripts -->
+        <!-- bootstrap js CDN included -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
