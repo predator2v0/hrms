@@ -222,21 +222,21 @@
         <section class="contact-us">
             <h1 class="section-heading">contact us</h1>
             <div class="contact-us-form">
-                <form action="contact.php" method="GET">
+                <form action="contact.php" method="POST">
                     <div class="contact-name">
                         <label>name:</label>
-                        <input type="text" />
+                        <input type="text" name="u_name" />
                     </div>
                     <div class="contact-email">
                         <label>email:</label>
-                        <input type="email" />
+                        <input type="email" name="u_email" />
                     </div>
                     <div class="contact-text">
                         <label>your message:</label>
-                        <textarea></textarea>
+                        <textarea name="u_message"></textarea>
                     </div>
                     <div class="send-message-btn">
-                        <input type="submit" value="send" />
+                        <input type="submit" value="send" name="submit" />
                     </div>
                 </form>
             </div>
