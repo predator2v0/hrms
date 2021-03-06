@@ -10,8 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Epilogue&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <!-- custom CSS files included -->
-    <link rel="stylesheet" href="css/style.css" />
     <!-- bootstrap js CDN included -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
