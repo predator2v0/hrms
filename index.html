@@ -229,15 +229,15 @@
                 <form action="contact.php" method="POST">
                     <div class="contact-name">
                         <label>name:</label>
-                        <input type="text" name="u_name" />
+                        <input type="text" name="u_name" required />
                     </div>
                     <div class="contact-email">
                         <label>email:</label>
-                        <input type="email" name="u_email" />
+                        <input type="email" name="u_email" required />
                     </div>
                     <div class="contact-text">
                         <label>your message:</label>
-                        <textarea name="u_message"></textarea>
+                        <textarea name="u_message" required></textarea>
                     </div>
                     <div class="send-message-btn">
                         <input type="submit" value="send" name="submit" />
@@ -245,6 +245,7 @@
                 </form>
             </div>
         </section>
+        <!-- footer section starts -->
         <section class="footer">
             <h1 class="footer-heading">custom castle</h1>
             <p class="github-repo">
