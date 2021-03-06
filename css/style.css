@@ -278,15 +278,50 @@ header {
     background: #fc5c65;
     padding: 10px 0;
     text-align: left;
+    cursor: pointer;
 }
 .send-message-btn input {
     color: #dddddd;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .footer {
     width: 100%;
-    height: 350px;
+    height: auto;
     background-color: #fc5c65;
+    padding: 30px;
+}
+.footer-heading {
+    font-family: "akhand", "sans-serif";
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 15px auto;
+    text-align: center;
+    color: #e2f3f5;
+}
+.github-repo {
+    margin: 20px auto;
+    text-align: center;
+}
+.github-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.github-repo a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #2d3436;
+    padding-top: 3px;
+}
+.github-repo a:hover {
+    color: #f9f7f7;
+}
+.copyright {
+    margin: 60px auto 20px;
+    text-align: center;
+    color: #dddddd;
 }
 /* font resources */
 /* font-family: 'Epilogue', sans-serif;
