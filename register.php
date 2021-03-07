@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,24 +82,24 @@
 
 <!-- registration form -->
 <section class="register-container">
-    <form action="" method="POST">
+    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="personal-info">
             <h3>personal information</h3>
             <div class="ipfield">
                 <label>name:</label>
-                <input type="text" name="u_name">
+                <input type="text" name="u_name" required>
             </div>
             <div class="ipfield">
                 <label>email:</label>
-                <input type="email" name="u_email">
+                <input type="email" name="u_email" required>
             </div>
             <div class="ipfield">
                 <label>contact no:</label>
-                <input type="phone" name="u_phno">
+                <input type="phone" name="u_phno" required>
             </div>
             <div class="ipfield">
                 <label>age:</label>
-                <input type="text" name="u_age">
+                <input type="text" name="u_age" required>
             </div>
             <div class="ipfield">
                 <label>gender:</label>
@@ -112,19 +115,19 @@
             <h3>contact information</h3>
             <div class="ipfield">
                 <label>address:</label>
-                <input type="text" name="u_addr">
+                <input type="text" name="u_addr" required>
             </div>
             <div class="ipfield">
                 <label>city:</label>
-                <input type="text" name="u_city">
+                <input type="text" name="u_city" required>
             </div>
             <div class="ipfield">
                 <label>state:</label>
-                <input type="text" name="u_state">
+                <input type="text" name="u_state" required>
             </div>
             <div class="ipfield">
                 <label>pincode:</label>
-                <input type="text" name="u_pincode">
+                <input type="text" name="u_pincode" required>
             </div>
         </div>
 
@@ -132,11 +135,11 @@
             <h3>password setting</h3>
             <div class="ipfield">
                 <label>password:</label>
-                <input type="password" name="u_password">
+                <input type="password" name="u_password" required>
             </div>
             <div class="ipfield">
                 <label>confirm password:</label>
-                <input type="password" name="u_cpassword">
+                <input type="password" name="u_cpassword" required>
             </div>
         </div>
         <div class="submit-reset">
