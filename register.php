@@ -35,11 +35,14 @@
             </div>
             <div class="ipfield">
                 <label>gender:</label>
-                <input type="radio">male
-                <input type="radio">female
-                <input type="radio">other
+                <div class="gender-select">
+                <input type="radio" name="gender">male
+                <input type="radio" name="gender">female
+                <input type="radio" name="gender">other
+                </div>
             </div>
         </div>
+
         <div class="contact-info">
             <h3>contact information</h3>
             <div class="ipfield">
@@ -59,6 +62,7 @@
                 <input type="text">
             </div>
         </div>
+
         <div class="password-info">
             <h3>password setting</h3>
             <div class="ipfield">
@@ -71,8 +75,8 @@
             </div>
         </div>
         <div class="submit-reset">
-            <input type="submit">
-            <input type="reset">
+            <input type="submit" name="submit" value="register">
+            <input type="reset" name="reset">
         </div>
     </form>
 </section>
