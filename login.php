@@ -127,26 +127,26 @@
             ?>
             <!-- form starts -->
             <div class="login-form">
-                                <form action="" method="POST">
-                                    <h3>Login</h3>
-                                    <input
-                                        type="text"
-                                        name="email"
-                                        placeholder="Username"
-                                    /><br />
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        placeholder="Password"
-                                    /><br />
-                                    <input
-                                        type="submit"
-                                        name="submit"
-                                        value="Login"
-                                        id="login-btn"
-                                    /><br />
-                                </form>
-                            </div>
+                <form action="" method="POST">
+                    <h3>Login</h3>
+                    <input
+                        type="text"
+                        name="email"
+                        placeholder="Username"
+                    /><br />
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                    /><br />
+                    <input
+                        type="submit"
+                        name="submit"
+                        value="Login"
+                        id="login-btn"
+                    /><br />
+                </form>
+            </div>
     <?php include 'footer.php'; ?>
 </body>
 </html>
