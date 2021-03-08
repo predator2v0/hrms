@@ -28,7 +28,7 @@
 }
 .houses,
 .booked,
-.occupied,
+.rented,
 .tenants {
     margin: 10px;
     width: 250px;
@@ -40,7 +40,7 @@
 .booked {
     background-color: #38ada9;
 }
-.occupied {
+.rented {
     background-color: #78e08f;
 }
 .tenants {
@@ -48,7 +48,7 @@
 }
 .houses h1,
 .booked h1,
-.occupied h1,
+.rented h1,
 .tenants h1 {
     margin: 10px auto 10px 10px;
     font-family: "akhand", sans-serif;
@@ -56,7 +56,7 @@
 }
 .houses p,
 .booked p,
-.occupied p,
+.rented p,
 .tenants p {
     margin: 30px auto 10px 10px;
     font-family: "akhand", sans-serif;
@@ -64,7 +64,7 @@
 }
 .houses p span,
 .booked p span,
-.occupied p span,
+.rented p span,
 .tenants p span {
     border: none;
     outline: none;
@@ -76,7 +76,7 @@
 }
 .houses p span a,
 .booked p span a,
-.occupied p span a,
+.rented p span a,
 .tenants p span a {
     color: #dddddd;
     text-decoration: none;
@@ -87,9 +87,13 @@
 }
 .add-btn {
     background-color: #fc5c65;
+    color: #dddddd;
+    text-transform: uppercase;
 }
 .remove-btn {
     background-color: #fc5c65;
+    color: #dddddd;
+    text-transform: uppercase;
 }
 .tenant-tools {
     margin: 10px auto;
@@ -99,18 +103,18 @@
     display: flex;
     flex-wrap: wrap;
 }
-.rented {
+.occupied {
     margin: 10px;
     width: 250px;
     height: 150px;
-    background-color: #b8e994;
+    background-color: #0a3d62;
 }
-.rented h1 {
+.occupied h1 {
     margin: 10px auto 10px 10px;
     font-family: "akhand", sans-serif;
     font-size: 3rem;
 }
-.rented p {
+.occupied p {
     margin: 30px auto 10px 10px;
     font-family: "akhand", sans-serif;
     font-size: 1.5rem;
