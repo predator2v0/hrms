@@ -14,9 +14,74 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body class="register-body">
-
-<!-- include header navbar -->
-<?php include 'header.php';?>
+    <header>
+        <!-- navbar section begins -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <a
+                    href="index.html"
+                    class="navbar-brand text-dark font-weight-bold"
+                    >CustomCastle</a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapsenav"
+                >
+                    <span>
+                        <img
+                            src="img/menuHamburger.svg"
+                            width="35px"
+                            height="35px"
+                            alt="menu-hamberger-icon"
+                        />
+                    </span>
+                </button>
+                <div
+                    class="collapse navbar-collapse text-center"
+                    id="collapsenav"
+                >
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link text-dark"
+                                >home</a
+                            >
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a
+                                href="#about_us"
+                                class="nav-link text-dark"
+                                >about us</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                href="#contact_us"
+                                class="nav-link text-dark"
+                                >contact us</a
+                            >
+                        </li>-->
+                        <li class="nav-item">
+                            <a
+                                href="login.php"
+                                class="nav-link text-dark"
+                                >login </a
+                            >
+                        </li>
+                        <!-- <li class="nav-item signup">
+                            <a
+                                href="logout.php"
+                                class="nav-link text-dark"
+                                >logout</a
+                            >
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar ends -->
+    </header>
 
 <!-- backend script for registration form -->
 <?php
