@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,6 +99,8 @@
                         if($usr_count){
                             $password = mysqli_fetch_assoc($resultset);
                             $matching_password = $password['password'];
+                            // for fetching the username
+                            $_SESSION['username'] = $password['name'];
                             $is_matching = password_verify($pass, $matching_password);
 
                     //  allow access if match found
@@ -103,7 +108,7 @@
                                 ?>
                                 <script>
                                     alert("login successful");
-                                    location.replace("index.html");
+                                    location.replace("dashboard.php");
                                 </script>
                                 <?php
                             }else{
