@@ -1,0 +1,117 @@
+/*font face  */
+@font-face {
+    font-family: "akhand";
+    src: url("../fonts/akhand.otf");
+    font-weight: normal;
+    font-size: medium;
+}
+/* main content */
+.dashboard-body {
+    background-color: #f4f9f9;
+}
+.dashboard-container {
+    width: 85%;
+    height: auto;
+    margin: 20px auto;
+    padding: 5%;
+}
+.welcome-heading {
+    font-family: "akhand", sans-serif;
+}
+.owner-tools {
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.houses,
+.booked,
+.occupied,
+.tenants {
+    margin: 10px;
+    width: 250px;
+    height: 150px;
+}
+.houses {
+    background-color: #079992;
+}
+.booked {
+    background-color: #38ada9;
+}
+.occupied {
+    background-color: #78e08f;
+}
+.tenants {
+    background-color: #b8e994;
+}
+.houses h1,
+.booked h1,
+.occupied h1,
+.tenants h1 {
+    margin: 10px auto 10px 10px;
+    font-family: "akhand", sans-serif;
+    font-size: 3rem;
+}
+.houses p,
+.booked p,
+.occupied p,
+.tenants p {
+    margin: 30px auto 10px 10px;
+    font-family: "akhand", sans-serif;
+    font-size: 1.5rem;
+}
+.houses p span,
+.booked p span,
+.occupied p span,
+.tenants p span {
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 2px 3px;
+    font-size: 0.75rem;
+    background-color: #fc5c65;
+    font-family: "Epilogue", sans-serif;
+}
+.houses p span a,
+.booked p span a,
+.occupied p span a,
+.tenants p span a {
+    color: #dddddd;
+    text-decoration: none;
+}
+.btn-container {
+    display: inline-block;
+    margin-left: 10px;
+}
+.add-btn {
+    background-color: #fc5c65;
+}
+.remove-btn {
+    background-color: #fc5c65;
+}
+.tenant-tools {
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.rented {
+    margin: 10px;
+    width: 250px;
+    height: 150px;
+    background-color: #b8e994;
+}
+.rented h1 {
+    margin: 10px auto 10px 10px;
+    font-family: "akhand", sans-serif;
+    font-size: 3rem;
+}
+.rented p {
+    margin: 30px auto 10px 10px;
+    font-family: "akhand", sans-serif;
+    font-size: 1.5rem;
+}
