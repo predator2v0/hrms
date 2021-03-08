@@ -160,7 +160,7 @@
             </div>
             <div class="ipfield">
                 <label>contact no:</label>
-                <input type="phone" name="u_phno" required>
+                <input type="tel" name="u_phno" maxlength="10" size="10" required>
             </div>
             <div class="ipfield">
                 <label>age:</label>
