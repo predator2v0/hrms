@@ -40,13 +40,13 @@ header {
     font-weight: 500;
     font-family: "Epilogue", sans-serif;
 }
-.signup {
+/* .signup {
     margin-left: 3px;
     border-radius: 3px;
 }
 .signup a {
     color: #000 !important;
-}
+} */
 .main-content {
     padding: 20px 15px 50px;
     width: 100%;
