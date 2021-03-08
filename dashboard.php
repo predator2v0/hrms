@@ -84,7 +84,7 @@
     </header>
     <!-- main content starts -->
     <section class="dashboard-container">
-        <h1 class="welcome-heading">hello <?php echo $_SESSION['username']; ?></h1>
+        <h1 class="welcome-heading">hello, <?php echo $_SESSION['username']; ?>!</h1>
         <hr>
         <div class="owner-tools">
             <div class="houses">
@@ -96,27 +96,28 @@
                 <h1>0</h1>
                 <p>booked <span><a href="">view</a></span></p>
             </div>
-            <div class="occupied">
+            <div class="rented">
                 <h1>0</h1>
-                <p>occupied <span><a href="">view</a></span></p>
+                <p>rented <span><a href="">view</a></span></p>
             </div>
             <div class="tenants">
                 <h1>0</h1>
                 <p>tenants <span><a href="">view</a></span></p>
             </div>
             <div class="btn-container">
-            <button class="btn add-btn" type="submit" name ="add">add property</button>
-            <button class="btn remove-btn" type="submit" name ="remove">remove property</button></div>
+            <button class="btn add-btn" type="submit" onclick="addProperty()">add property</button>
+            <button class="btn remove-btn" type="submit" name ="removeproperty">remove property</button></div>
         </div>
         <hr>
         <div class="tenant-tools">
-            <div class="rented">
+            <div class="occupied">
                 <h1>0</h1>
-                <p>properties on rent</p>
+                <p>occupied</p>
             </div>
         </div>
     </section>
 
     <?php include 'footer.php'; ?>
+    <script src="script/dashboard.js"></script>
 </body>
 </html>
