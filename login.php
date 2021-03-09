@@ -45,7 +45,7 @@
                 >
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link text-dark"
+                            <a href="index.html" class="nav-link text-dark"
                                 >home</a
                             >
                         </li>
