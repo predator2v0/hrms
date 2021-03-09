@@ -1,3 +1,3 @@
 function addProperty() {
-    location.replace("index.html");
+    location.replace("addproperty.php");
 }
