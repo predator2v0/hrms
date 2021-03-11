@@ -1,0 +1,17 @@
+/*font face  */
+@font-face {
+    font-family: "akhand";
+    src: url("../fonts/akhand.otf");
+    font-weight: normal;
+    font-size: medium;
+}
+/* main content */
+.addproperty-body {
+    background-color: #f4f9f9;
+}
+.addproperty-container {
+    width: 85%;
+    height: 600px;
+    margin: 20px auto;
+    padding: 5%;
+}
