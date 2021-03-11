@@ -11,8 +11,9 @@
     <title>add property | hrms</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/addproperty.css">
 </head>
-<body>
+<body class="addproperty-body">
     <header>
         <!-- navbar section begins -->
         <nav class="navbar navbar-expand-md">
@@ -81,6 +82,9 @@
         </nav>
         <!-- navbar ends -->
     </header>
+    <section class="addproperty-container">
+
+    </section>
 
     <?php include 'footer.php'; ?>
 </body>
