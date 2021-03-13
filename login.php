@@ -96,11 +96,23 @@
 
                 // if user exists, password matching
                     if($usr_count){
-                        $password = mysqli_fetch_assoc($resultset);
-                        $matching_password = $password['password'];
-                        // for fetching the username
-                        $_SESSION['username'] = $password['name'];
+                        $userdata = mysqli_fetch_assoc($resultset);
+                        
+                        // get password and match
+                        $matching_password = $userdata['password'];
                         $is_matching = password_verify($pass, $matching_password);
+
+                        // fetch all data
+                            $_SESSION['id'] = $userdata['id'];
+                            $_SESSION['name'] = $userdata['name'];
+                            $_SESSION['email'] = $userdata['email'];
+                            $_SESSION['contact'] = $userdata['contact'];
+                            $_SESSION['age'] = $userdata['age'];
+                            $_SESSION['gender'] = $userdata['gender'];
+                            $_SESSION['address'] = $userdata['address'];
+                            $_SESSION['city'] = $userdata['city'];
+                            $_SESSION['state'] = $userdata['state'];
+                            $_SESSION['pincode'] = $userdata['pincode'];
 
                 //  allow access if match found
                         if($is_matching){
