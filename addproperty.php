@@ -83,9 +83,25 @@
         <!-- navbar ends -->
     </header>
     <section class="addproperty-container">
+        <h1 class="welcome-heading">hello, <?php echo $_SESSION['name']; ?>!</h1>
+        <hr>
+        <div class="addproperty-form">
+            <form action="" method="POST">
+                <div class="property-info">
 
+                </div>
+                <div class="contact-info">
+
+                </div>
+                <div class="property-image">
+
+                </div>
+                <div class="submit-reset">
+
+                </div>
+            </form>
+        </div>
     </section>
-
     <?php include 'footer.php'; ?>
 </body>
 </html>
