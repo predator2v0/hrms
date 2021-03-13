@@ -84,7 +84,7 @@
     </header>
     <!-- main content starts -->
     <section class="dashboard-container">
-        <h1 class="welcome-heading">hello, <?php echo $_SESSION['username']; ?>!</h1>
+        <h1 class="welcome-heading">hello, <?php echo $_SESSION['name']; ?>!</h1>
         <hr>
         <div class="owner-tools">
             <div class="houses">
