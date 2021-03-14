@@ -18,7 +18,7 @@
 }
 .register-container form {
     margin: 20px auto;
-    border: 1px soiid #636e72;
+    /* border: 1px solid #636e72; */
     text-align: center;
     padding: 10px;
     border-radius: 3px;
