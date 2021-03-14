@@ -88,6 +88,65 @@
 
         if($con){
             if(isset($_POST['submit'])){
+                // input all the details about property
+                $pname = mysqli_real_escape_string($con,$_POST['p_name']);
+                $locality = mysqli_real_escape_string($con,$_POST['p_locality']);
+                $landmark = mysqli_real_escape_string($con,$_POST['p_landmark']);
+                $city = mysqli_real_escape_string($con,$_POST['p_city']);
+                $state = mysqli_real_escape_string($con,$_POST['p_state']);
+                $pincode = mysqli_real_escape_string($con,$_POST['p_pincode']);
+                $regtype = mysqli_real_escape_string($con,$_POST['p_regtype']);
+                $roomcount = mysqli_real_escape_string($con,$_POST['p_roomcount']);
+                $oname = mysqli_real_escape_string($con,$_POST['o_name']);
+                $oemail = $_SESSION['email'];
+                // $oemail = mysqli_real_escape_string($con,$_POST['o_email']);
+                $ocontact = mysqli_real_escape_string($con,$_POST['o_contact']);
+                
+                // input property images
+                $pic1 = $_FILES['p_pic1'];
+                $pic2 = $_FILES['p_pic2'];
+                // image validation
+                $pic1name = $pic1['name'];
+                $pic2name = $pic2['name'];
+                $pic1tmp = $pic1['tmp_name'];
+                $pic2tmp = $pic2['tmp_name'];
+
+                // extraction of the file extension
+                $legal_extensions = array('png','jpg','jpeg');
+
+                $extensionAr1 = explode('.',$pic1name);
+                $extensionAr2 = explode('.',$pic2name);
+
+                $extension1 = strtolower(end($extensionAr1));
+                $extension2 = strtolower(end($extensionAr2));
+
+                // check for match
+                if(in_array($extension1,$legal_extensions) && in_array($extension2,$legal_extensions)){
+                    $store_path_1 = 'img/upload/'.$pic1name;
+                    $store_path_2 = 'img/upload/'.$pic2name;
+
+                    move_uploaded_file($pic1tmp,$store_path_1);
+                    move_uploaded_file($pic2tmp,$store_path_2);
+
+                    // upload and insert in db query
+                    $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount','$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
+
+                    // execute query
+                    $query = mysqli_query($con,$insert_query);
+                    if($query){
+                        ?>
+                        <script>
+                            alert("property registered successfully!");
+                        </script>
+                        <?php
+                    }else{
+                        ?>
+                        <script>
+                            alert("unable to register:) please try again!!");
+                        </script>
+                        <?php
+                    }
+                }
                 
             }
         }
@@ -137,7 +196,7 @@
                     </div>
                     <div class="ipfield">
                         <label>property type:</label>
-                        <select name="p_type" id="">
+                        <select name="p_roomcount" id="">
                             <option value="">--select--</option>
                             <option value="onebhk">1 BHK</option>
                             <option value="twobhk">2 BHK</option>
