@@ -7,14 +7,80 @@
 }
 /* main content */
 .addproperty-body {
+    color: #636e72;
+    font-family: "Epilogue", sans-serif;
     background-color: #f4f9f9;
 }
 .addproperty-container {
     width: 85%;
-    height: 600px;
+    height: auto;
     margin: 20px auto;
     padding: 5%;
 }
 .welcome-heading {
     font-family: "akhand", sans-serif;
+}
+.addproperty-container form {
+    margin: 20px auto;
+    /* border: 1px solid #636e72; */
+    background-color: rgba(183, 235, 235, 0.4);
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+.property-info,
+.owner-info,
+.property-image {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+}
+.property-info h3,
+.owner-info h3,
+.property-image h3 {
+    font-size: 1.5rem;
+    font-family: "akhand";
+    text-align: left;
+    padding: 0 40px;
+}
+.ipfield {
+    width: 85%;
+    margin: 0px auto;
+    padding: 12px 18px;
+}
+.ipfield label {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #2d3436;
+}
+.ipfield input,
+.ipfield select,
+.ipfield option {
+    width: 100%;
+    border: 2px solid #636e72;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    padding: 3px 5px;
+    /* border-bottom: 2px solid #636e72; */
+}
+
+.submit-reset {
+    display: block;
+    margin: 20px auto 10px;
+    text-align: center;
+}
+.submit-reset input {
+    color: #dddddd;
+    text-transform: uppercase;
+    background: #fc5c65;
+    cursor: pointer;
+    width: 35%;
+    padding: 10px;
+    margin: 20px 30px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
 }
