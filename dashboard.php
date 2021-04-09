@@ -82,22 +82,51 @@
         </nav>
         <!-- navbar ends -->
     </header>
+    <!-- dashboard info from db -->
+    <?php
+        include 'connection.php';
+        if($_SESSION['name']){
+            $mail = $_SESSION['email'];
+            
+            $totalcountquery  = "select * from property where oemail = '$mail' ";
+            $resultset = mysqli_query($con,$totalcountquery);
+            $propertycount = mysqli_num_rows($resultset);
+
+            $bookedcountquery = "select * from property where oemail = '$mail' and bstatus = 1 ";
+            $bookedresult = mysqli_query($con,$bookedcountquery);
+            $bookedcount = mysqli_num_rows($bookedresult); 
+
+            $rentedcountquery = "select * from property where oemail = '$mail' and rstatus = 1";
+            $rentedresult = mysqli_query($con,$rentedcountquery);
+            $rentedcount = mysqli_num_rows($rentedresult);
+
+            $tenantcountquery = "select * from property where oemail = '$mail' and tname IS NOT NULL";
+        }
+    ?>
     <!-- main content starts -->
     <section class="dashboard-container">
         <h1 class="welcome-heading">hello, <?php echo $_SESSION['name']; ?>!</h1>
         <hr>
         <div class="owner-tools">
             <div class="houses">
-                <h1>0</h1>
-                <p>houses <span><a href="">view</a></span></p>
+                <h1>
+                    <?php
+                        echo $propertycount;
+                    ?>
+                </h1>
+                <p>houses <span><a href="viewproperty.php">view</a></span></p>
                 
             </div>
             <div class="booked">
-                <h1>0</h1>
+                <h1><?php
+                        echo $bookedcount;
+                    ?></h1>
                 <p>booked <span><a href="">view</a></span></p>
             </div>
             <div class="rented">
-                <h1>0</h1>
+                <h1><?php
+                        echo $rentedcount;
+                    ?></h1>
                 <p>rented <span><a href="">view</a></span></p>
             </div>
             <div class="tenants">
