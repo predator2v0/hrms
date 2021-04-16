@@ -85,12 +85,18 @@
     
     <section class="viewproperty-container">
         <table class="table table-striped table-hover">
-            <thead>
-                <tr>
+            <thead class="font-weight-bold">
+                <tr class="text-uppercase">
                     <td>sl. no.</td>
                     <td>property name</td>
                     <td>address</td>
                     <td>landmark</td>
+                    <td>city</td>
+                    <td>state</td>
+                    <td>pincode</td>
+                    <td>type</td>
+                    <td>rooms</td>
+                    <td colspan="2">edit</td>
                 </tr>
             </thead>
             <tbody>
@@ -101,15 +107,24 @@
                 $retrive_query = "select * from property where oemail = '$mail' ";
                 $resultset = mysqli_query($con,$retrive_query);
                 $rows = mysqli_num_rows($resultset);
+                $sl = 1;
                 while($res = mysqli_fetch_array($resultset)){
             ?>
                 <tr>
-                    <td><?php echo $res['id']; ?></td>
+                    <td><?php echo $sl; ?></td>
                     <td><?php echo $res['pname']; ?></td>
                     <td><?php echo $res['locality']; ?></td>
                     <td><?php echo $res['landmark']; ?></td>
+                    <td><?php echo $res['city']; ?></td>
+                    <td><?php echo $res['state']; ?></td>
+                    <td><?php echo $res['pincode']; ?></td>
+                    <td><?php echo $res['regtype']; ?></td>
+                    <td><?php echo $res['roomcount']; ?></td>
+                    <td>E</td>
+                    <td>D</td>
                 </tr>
             <?php
+                $sl++;
                 }
             }
             ?>  
