@@ -100,7 +100,7 @@
                     <td>pincode</td>
                     <td>type</td>
                     <td>rooms</td>
-                    <td colspan="2">edit</td>
+                    <td colspan="2">Operations</td>
                 </tr>
             </thead>
             <tbody>
@@ -123,9 +123,18 @@
                     <td><?php echo $res['state']; ?></td>
                     <td><?php echo $res['pincode']; ?></td>
                     <td><?php echo $res['regtype']; ?></td>
-                    <td><?php echo $res['roomcount']; ?></td>
-                    <td>E</td>
-                    <td>D</td>
+                    <td><?php 
+                            if($res['roomcount'] == 'onebhk')
+                                echo "1 BHK";
+                            if($res['roomcount'] == 'twobhk')
+                                echo "2 BHK";
+                            if($res['roomcount'] == 'threebhk')
+                                echo "3 BHK";
+                            
+                        ?>
+                    </td>
+                    <td><a href="#" data-toggle="tooltip" data-placement="bottom" title="Update"><i class="fa fa-edit text-success" aria-hidden="true"></i></a></td>
+                    <td><a href="#" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
                 </tr>
             <?php
                 $sl++;
@@ -137,5 +146,6 @@
     </section>
 
     <?php include 'footer.php'; ?>
+    <script src="script/viewproperty.js"></script>
 </body>
 </html>
