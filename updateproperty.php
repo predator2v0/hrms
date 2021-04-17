@@ -90,6 +90,12 @@
     <?php
         include 'connection.php';
 
+            $pid = $_GET['id'];
+            $fetchpdata = "select * from property where id = {$pid}";
+            $pdata = mysqli_query($con, $fetchpdata);
+
+            $parray = mysqli_fetch_array($pdata);
+
         if($con){
             if(isset($_POST['submit'])){
                 // input all the details about property
@@ -165,32 +171,32 @@
                     <h3>property information</h3>
                     <div class="ipfield">
                         <label>property name:</label>
-                        <input type="text" name="p_name" required>
+                        <input type="text" name="p_name" value="<?php echo $parray['pname']; ?>" required>
                     </div>
                     <div class="ipfield">
                         <label>locality:</label>
-                        <input type="text" name="p_locality" required>
+                        <input type="text" name="p_locality" value="<?php echo $parray['locality']; ?>" required>
                     </div>
                     <div class="ipfield">
                         <label>landmark:</label>
-                        <input type="text" name="p_landmark" required>
+                        <input type="text" name="p_landmark" value="<?php echo $parray['landmark']; ?>" required>
                     </div>
                     <div class="ipfield">
                         <label>city:</label>
-                        <input type="text" name="p_city" required>
+                        <input type="text" name="p_city" value="<?php echo $parray['city']; ?>" required>
                     </div>
                     <div class="ipfield">
                         <label>state:</label>
-                        <input type="text" name="p_state" required>
+                        <input type="text" name="p_state" value="<?php echo $parray['state']; ?>" required>
                     </div>
                     <div class="ipfield">
                         <label>pincode:</label>
-                        <input type="text" name="p_pincode" required>
+                        <input type="text" name="p_pincode" value="<?php echo $parray['pincode']; ?>" required>
                     </div>
                     <div class="ipfield">
                         <label>registration type:</label>
-                        <select name="p_regtype" id="">
-                            <option value="">--select--</option>
+                        <select name="p_regtype" id=""  >
+                            <option value=""><?php echo $parray['regtype']; ?></option>
                             <option value="apartment">apartment</option>
                             <option value="hostel">hostel</option>
                             <option value="house">house</option>
@@ -201,7 +207,20 @@
                     <div class="ipfield">
                         <label>property type:</label>
                         <select name="p_roomcount" id="">
-                            <option value="">--select--</option>
+                            <option value="">
+                                <?php
+                                    if($parray['roomcount'] == 'onebhk'){
+                                        echo "1 BHK";
+                                    }
+                                    if($parray['roomcount'] == 'twobhk'){
+                                        echo "2 BHK";
+                                    }
+                                    if($parray['roomcount'] == 'threebhk'){
+                                        echo "3 BHK";
+                                    }
+                                  ?>
+                            
+                            </option>
                             <option value="onebhk">1 BHK</option>
                             <option value="twobhk">2 BHK</option>
                             <option value="threebhk">3 BHK</option>
@@ -236,7 +255,7 @@
                     </div>
                 </div>
                 <div class="submit-reset">
-                <input type="submit" name="submit" value="register">
+                <input type="submit" name="submit" value="update">
                 <input type="reset" name="reset">
                 </div>
             </form>
