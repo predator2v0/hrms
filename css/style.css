@@ -120,6 +120,7 @@ header {
     width: 20%;
     float: left;
     margin-right: 15px;
+    border-radius: 50%;
 }
 .easy-access-heading {
     font-family: "Roboto", sans-serif;
