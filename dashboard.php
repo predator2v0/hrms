@@ -125,7 +125,7 @@
                 <h1><?php
                         echo $bookedcount;
                     ?></h1>
-                <p>booked <span><a href="">view</a></span></p>
+                <p>booked <span><a href="viewproperty.php">view</a></span></p>
             </div>
             <div class="rented">
                 <h1><?php
