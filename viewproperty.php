@@ -88,7 +88,7 @@
     </header>
     
     <section class="viewproperty-container">
-        <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover table-bordered">
             <thead class="font-weight-bold">
                 <tr class="text-uppercase">
                     <td>sl. no.</td>
@@ -108,6 +108,7 @@
                 include 'connection.php';
                 if($_SESSION['name']){
                 $mail = $_SESSION['email'];
+
                 $retrive_query = "select * from property where oemail = '$mail' ";
                 $resultset = mysqli_query($con,$retrive_query);
                 $rows = mysqli_num_rows($resultset);
@@ -133,8 +134,8 @@
                             
                         ?>
                     </td>
-                    <td><a href="#" data-toggle="tooltip" data-placement="bottom" title="Update"><i class="fa fa-edit text-success" aria-hidden="true"></i></a></td>
-                    <td><a href="#" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
+                    <td><a href="updateproperty.php" data-toggle="tooltip" data-placement="right" title="Update"><i class="fa fa-edit text-success" aria-hidden="true"></i></a></td>
+                    <td><a href="#" data-toggle="tooltip" data-placement="right" title="Delete"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
                 </tr>
             <?php
                 $sl++;
