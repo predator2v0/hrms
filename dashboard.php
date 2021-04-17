@@ -92,18 +92,26 @@
         if($_SESSION['name']){
             $mail = $_SESSION['email'];
             
+            // select all rows
             $totalcountquery  = "select * from property where oemail = '$mail' ";
             $resultset = mysqli_query($con,$totalcountquery);
             $propertycount = mysqli_num_rows($resultset);
 
+            // retrieve the bstatus of the property and store in session variable.
+            $statusinfo = mysqli_fetch_assoc($resultset);
+            $_SESSION['bstatus'] = $statusinfo['bstatus'];
+
+            // select the booked properties
             $bookedcountquery = "select * from property where oemail = '$mail' and bstatus = 1 ";
             $bookedresult = mysqli_query($con,$bookedcountquery);
             $bookedcount = mysqli_num_rows($bookedresult); 
 
+            // select the rented properties
             $rentedcountquery = "select * from property where oemail = '$mail' and rstatus = 1";
             $rentedresult = mysqli_query($con,$rentedcountquery);
             $rentedcount = mysqli_num_rows($rentedresult);
 
+            // select the number of tenants
             $tenantcountquery = "select * from property where oemail = '$mail' and tname IS NOT NULL";
         }
     ?>
