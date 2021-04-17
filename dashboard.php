@@ -1,5 +1,9 @@
 <?php
- session_start();
+    session_start();
+
+    if(!isset($_SESSION['email'])){
+        header('location:login.php');
+    }
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,8 +138,8 @@
                 <p>tenants <span><a href="">view</a></span></p>
             </div>
             <div class="btn-container">
-            <button class="btn add-btn" type="submit" onclick="addProperty()">add property</button>
-            <button class="btn remove-btn" type="submit" name ="removeproperty">remove property</button></div>
+            <button class="btn add-btn" type="submit" name="addproperty" onclick="window.open('addproperty.php')">add property</button>
+            <button class="btn remove-btn" type="submit" name ="removeproperty" onclick="window.open('viewproperty.php')">remove property</button></div>
         </div>
         <hr>
         <div class="tenant-tools">
