@@ -23,3 +23,6 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
     crossorigin="anonymous">
     </script>
+
+    <!-- font awesome kit link -->
+    <script src="https://kit.fontawesome.com/7a15be51b1.js" crossorigin="anonymous"></script>
