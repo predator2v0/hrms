@@ -126,7 +126,7 @@
                         echo $propertycount;
                     ?>
                 </h1>
-                <p>houses <span><a href="viewproperty.php">view</a></span></p>
+                <p>houses <span><a href="viewallproperty.php">view</a></span></p>
                 
             </div>
             <div class="booked">
@@ -147,7 +147,7 @@
             </div>
             <div class="btn-container">
             <button class="btn add-btn" type="submit" name="addproperty" onclick="window.open('addproperty.php')">add property</button>
-            <button class="btn remove-btn" type="submit" name ="removeproperty" onclick="window.open('viewproperty.php')">remove property</button></div>
+            <button class="btn remove-btn" type="submit" name ="removeproperty" onclick="window.open('viewallproperty.php')">remove property</button></div>
         </div>
         <hr>
         <div class="tenant-tools">
