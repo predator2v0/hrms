@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-md">
             <div class="container">
                 <a
-                    href="index.html"
+                    href="index.php"
                     class="navbar-brand text-dark font-weight-bold"
                     >CustomCastle</a
                 >
@@ -48,7 +48,7 @@
                 >
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link text-dark"
+                            <a href="index.php" class="nav-link text-dark"
                                 >home</a
                             >
                         </li>
