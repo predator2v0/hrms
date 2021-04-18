@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>view all property | hrms</title>
+    <title>rented property | hrms</title>
     <?php include 'links.php'; ?>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
@@ -109,7 +109,7 @@
                 if($_SESSION['name']){
                 $mail = $_SESSION['email'];
                 
-                $retrive_query = "select * from property where oemail = '$mail' ";
+                $retrive_query = "select * from property where oemail = '$mail' and rstatus = 1";
                 $resultset = mysqli_query($con,$retrive_query);
                 $rows = mysqli_num_rows($resultset);
                 $sl = 1;
