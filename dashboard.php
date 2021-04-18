@@ -129,7 +129,7 @@
                 <h1><?php
                         echo $bookedcount;
                     ?></h1>
-                <p>booked <span><a href="#">view</a></span></p>
+                <p>booked <span><a href="bookedproperty.php">view</a></span></p>
             </div>
             <div class="rented">
                 <h1><?php
@@ -155,6 +155,5 @@
     </section>
 
     <?php include 'footer.php'; ?>
-    <script src="script/dashboard.js"></script>
 </body>
 </html>
