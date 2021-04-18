@@ -66,13 +66,13 @@
                                 >contact us</a
                             >
                         </li>-->
-                        <!-- <li class="nav-item">
+                         <li class="nav-item">
                             <a
-                                href="login.php"
+                                href="dashboard.php"
                                 class="nav-link text-dark"
-                                >HELLO </a
+                                >dashboard </a
                             >
-                        </li> -->
+                        </li> 
                         <li class="nav-item signup">
                             <a
                                 href="logout.php"
