@@ -12,8 +12,8 @@
     background-color: #f4f9f9;
 }
 .viewproperty-container {
-    width: 90%;
-    height: auto;
+    width: 85%;
+    min-height: 400px;
     margin: 20px auto;
     padding: 5%;
 }
