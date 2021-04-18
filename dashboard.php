@@ -97,10 +97,6 @@
             $resultset = mysqli_query($con,$totalcountquery);
             $propertycount = mysqli_num_rows($resultset);
 
-            // retrieve the bstatus of the property and store in session variable.
-            $statusinfo = mysqli_fetch_assoc($resultset);
-            $_SESSION['bstatus'] = $statusinfo['bstatus'];
-
             // select the booked properties
             $bookedcountquery = "select * from property where oemail = '$mail' and bstatus = 1 ";
             $bookedresult = mysqli_query($con,$bookedcountquery);
