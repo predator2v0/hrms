@@ -98,6 +98,8 @@
 
         if($con){
             if(isset($_POST['submit'])){
+
+                    $updateid = $_GET['id'];
                 // input all the details about property
                 $pname = mysqli_real_escape_string($con,$_POST['p_name']);
                 $locality = mysqli_real_escape_string($con,$_POST['p_locality']);
@@ -113,50 +115,52 @@
                 $ocontact = mysqli_real_escape_string($con,$_POST['o_contact']);
                 
                 // input property images
-                $pic1 = $_FILES['p_pic1'];
-                $pic2 = $_FILES['p_pic2'];
-                // image validation
-                $pic1name = $pic1['name'];
-                $pic2name = $pic2['name'];
-                $pic1tmp = $pic1['tmp_name'];
-                $pic2tmp = $pic2['tmp_name'];
+                // $pic1 = $_FILES['p_pic1'];
+                // $pic2 = $_FILES['p_pic2'];
+                // // image validation
+                // $pic1name = $pic1['name'];
+                // $pic2name = $pic2['name'];
+                // $pic1tmp = $pic1['tmp_name'];
+                // $pic2tmp = $pic2['tmp_name'];
 
-                // extraction of the file extension
-                $legal_extensions = array('png','jpg','jpeg');
+                // // extraction of the file extension
+                // $legal_extensions = array('png','jpg','jpeg');
 
-                $extensionAr1 = explode('.',$pic1name);
-                $extensionAr2 = explode('.',$pic2name);
+                // $extensionAr1 = explode('.',$pic1name);
+                // $extensionAr2 = explode('.',$pic2name);
 
-                $extension1 = strtolower(end($extensionAr1));
-                $extension2 = strtolower(end($extensionAr2));
+                // $extension1 = strtolower(end($extensionAr1));
+                // $extension2 = strtolower(end($extensionAr2));
 
-                // check for match
-                if(in_array($extension1,$legal_extensions) && in_array($extension2,$legal_extensions)){
-                    $store_path_1 = 'img/upload/'.$pic1name;
-                    $store_path_2 = 'img/upload/'.$pic2name;
+                // // check for match
+                // if(in_array($extension1,$legal_extensions) && in_array($extension2,$legal_extensions)){
+                //     $store_path_1 = 'img/upload/'.$pic1name;
+                //     $store_path_2 = 'img/upload/'.$pic2name;
 
-                    move_uploaded_file($pic1tmp,$store_path_1);
-                    move_uploaded_file($pic2tmp,$store_path_2);
+                //     move_uploaded_file($pic1tmp,$store_path_1);
+                //     move_uploaded_file($pic2tmp,$store_path_2);
 
                     // upload and insert in db query
-                    $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount','$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
+                    // $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount','$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
 
+                    // update query
+                    $update_query = "update property set pname = '$pname', locality = '$locality',landmark = '$landmark',city = '$city',state = '$state', pincode = '$pincode',regtype = '$regtype',roomcount = '$roomcount', oname = '$oname',oemail = '$oemail',ocontact = '$ocontact' where id = $updateid ";
                     // execute query
-                    $query = mysqli_query($con,$insert_query);
+                    $query = mysqli_query($con,$update_query);
                     if($query){
                         ?>
                         <script>
-                            alert("property registered successfully!");
+                            alert("property updated successfully!");
                         </script>
                         <?php
                     }else{
                         ?>
                         <script>
-                            alert("unable to register:) please try again!!");
+                            alert("unable to update:) please try again!!");
                         </script>
                         <?php
                     }
-                }
+                // }
                 
             }
         }
@@ -196,7 +200,9 @@
                     <div class="ipfield">
                         <label>registration type:</label>
                         <select name="p_regtype" id=""  >
-                            <option value=""><?php echo $parray['regtype']; ?></option>
+                            <option value="<?php echo $parray['regtype']; ?>">
+                                 <?php echo $parray['regtype']; ?> 
+                            </option>
                             <option value="apartment">apartment</option>
                             <option value="hostel">hostel</option>
                             <option value="house">house</option>
@@ -207,7 +213,7 @@
                     <div class="ipfield">
                         <label>property type:</label>
                         <select name="p_roomcount" id="">
-                            <option value="">
+                            <option value="<?php echo $parray['roomcount']; ?>">
                                 <?php
                                     if($parray['roomcount'] == 'onebhk'){
                                         echo "1 BHK";
@@ -243,16 +249,16 @@
                         <input type="text" name="o_contact" value="<?php echo $_SESSION['contact']; ?>" required>
                     </div>
                 </div>
-                <div class="property-image">
+                <!-- <div class="property-image">
                     <h3>upload image</h3>
                     <div class="ipfield">
                         <label>image 1:</label>
-                        <input class="img-upload" type="file" name="p_pic1" required>
+                        <input class="img-upload" type="file" name="p_pic1" >
                     </div>
                     <div class="ipfield">
                         <label>image 2:</label>
-                        <input class="img-upload" type="file" name="p_pic2" required>
-                    </div>
+                        <input class="img-upload" type="file" name="p_pic2" >
+                    </div> -->
                 </div>
                 <div class="submit-reset">
                 <input type="submit" name="submit" value="update">
