@@ -135,7 +135,7 @@
                         ?>
                     </td>
                     <td><a href="updateproperty.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="right" title="Update"><i class="fa fa-edit text-success" aria-hidden="true"></i></a></td>
-                    <td><a href="deleteproperty.php" data-toggle="tooltip" data-placement="left" title="Delete"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
+                    <td><a href="deleteproperty.php?id=<?php echo $res['id']; ?>" data-toggle="tooltip" data-placement="left" title="Delete"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
                 </tr>
             <?php
                 $sl++;
