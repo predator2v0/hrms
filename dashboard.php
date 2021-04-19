@@ -103,7 +103,7 @@
             $bookedcount = mysqli_num_rows($bookedresult); 
 
             // select the rented properties
-            $rentedcountquery = "select * from property where oemail = '$mail' and rstatus = 1";
+            $rentedcountquery = "select * from property where oemail = '$mail' and temail IS NOT NULL";
             $rentedresult = mysqli_query($con,$rentedcountquery);
             $rentedcount = mysqli_num_rows($rentedresult);
 
