@@ -236,7 +236,7 @@
                 <div class="property-image">
                     <h3>upload image</h3>
                     <div class="ipfield">
-                        <label>image 1:</label>
+                        <label>image :</label>
                         <input class="img-upload" type="file" name="p_pic1" required>
                     </div>
                     <!-- <div class="ipfield">
