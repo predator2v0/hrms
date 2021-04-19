@@ -106,7 +106,7 @@
                         
                         <div class="col-lg-6 col-md-6 col-sm-10 col-12">
                             <div class="search-form form-group">
-                                <form action="viewresults.php" method="POST">
+                                <form action="viewresults.php" method="POST" target="_blank">
                                     <input
                                         type="text"
                                         maxlength="6"
