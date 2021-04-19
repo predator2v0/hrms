@@ -108,7 +108,14 @@
             $rentedcount = mysqli_num_rows($rentedresult);
 
             // select the number of tenants
-            $tenantcountquery = "select * from property where oemail = '$mail' and tname IS NOT NULL";
+            $tenantcountquery = "select distinct * from property where oemail = '$mail' and temail IS NOT NULL";
+            $tenantresult = mysqli_query($con,$tenantcountquery);
+            $tenantcount = mysqli_num_rows($tenantresult);
+
+            // select number of houses occupied
+            $occupycountquery = " select * from property where temail = '$mail' ";
+            $occupyresult = mysqli_query($con,$occupycountquery);
+            $occupycount = mysqli_num_rows($occupyresult);
         }
     ?>
     <!-- main content starts -->
@@ -138,8 +145,10 @@
                 <p>rented <span><a href="rentedproperty.php" target = "_blank">view</a></span></p>
             </div>
             <div class="tenants">
-                <h1>0</h1>
-                <p>tenants <span><a href="">view</a></span></p>
+                <h1><?php
+                        echo $tenantcount
+                    ?></h1>
+                <p>tenants <span><a href="viewtenants.php">view</a></span></p>
             </div>
             <div class="btn-container">
             <button class="btn add-btn" type="submit" name="addproperty" onclick="window.open('addproperty.php')">add property</button>
@@ -148,8 +157,10 @@
         <hr>
         <div class="tenant-tools">
             <div class="occupied">
-                <h1>0</h1>
-                <p>occupied</p>
+                <h1><?php
+                        echo $occupycount
+                    ?></h1>
+                <p>occupied <span><a href="viewoccupied.php">view</a></span></p>
             </div>
         </div>
     </section>
