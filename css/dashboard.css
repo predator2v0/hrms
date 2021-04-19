@@ -57,7 +57,8 @@
 .houses p,
 .booked p,
 .rented p,
-.tenants p {
+.tenants p,
+.occupied p {
     margin: 30px auto 10px 10px;
     font-family: "akhand", sans-serif;
     font-size: 1.5rem;
@@ -65,7 +66,8 @@
 .houses p span,
 .booked p span,
 .rented p span,
-.tenants p span {
+.tenants p span,
+.occupied p span {
     border: none;
     outline: none;
     border-radius: 2px;
@@ -77,7 +79,8 @@
 .houses p span a,
 .booked p span a,
 .rented p span a,
-.tenants p span a {
+.tenants p span a,
+.occupied p span a {
     color: #dddddd;
     text-decoration: none;
 }
