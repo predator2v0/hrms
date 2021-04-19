@@ -28,6 +28,9 @@
     padding: 10px;
     margin: 15px;
     display: flex;
+    -webkit-box-shadow: 2px 3px 17px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 3px 17px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 3px 17px 0px rgba(0, 0, 0, 0.75);
 }
 .result-box:hover {
     -webkit-box-shadow: 7px 10px 14px -1px rgba(0, 0, 0, 0.67);
