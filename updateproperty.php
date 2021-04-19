@@ -109,6 +109,8 @@
                 $pincode = mysqli_real_escape_string($con,$_POST['p_pincode']);
                 $regtype = mysqli_real_escape_string($con,$_POST['p_regtype']);
                 $roomcount = mysqli_real_escape_string($con,$_POST['p_roomcount']);
+                $minprice = mysqli_real_escape_string($con,$_POST['p_minprice']);
+                $maxprice = mysqli_real_escape_string($con,$_POST['p_maxprice']);
                 $oname = mysqli_real_escape_string($con,$_POST['o_name']);
                 $oemail = $_SESSION['email'];
                 // $oemail = mysqli_real_escape_string($con,$_POST['o_email']);
@@ -144,7 +146,7 @@
                     // $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount','$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
 
                     // update query
-                    $update_query = "update property set pname = '$pname', locality = '$locality',landmark = '$landmark',city = '$city',state = '$state', pincode = '$pincode',regtype = '$regtype',roomcount = '$roomcount', oname = '$oname',oemail = '$oemail',ocontact = '$ocontact' where id = $updateid ";
+                    $update_query = "update property set pname = '$pname', locality = '$locality',landmark = '$landmark',city = '$city',state = '$state', pincode = '$pincode',regtype = '$regtype',roomcount = '$roomcount',minprice = $minprice,maxprice = $maxprice, oname = '$oname',oemail = '$oemail',ocontact = '$ocontact' where id = $updateid ";
                     // execute query
                     $query = mysqli_query($con,$update_query);
                     if($query){
@@ -231,6 +233,14 @@
                             <option value="twobhk">2 BHK</option>
                             <option value="threebhk">3 BHK</option>
                         </select>
+                    </div>
+                    <div class="ipfield">
+                        <label>min price:</label>
+                        <input type="number" name="p_minprice" value="<?php echo $parray['minprice']; ?>" required>
+                    </div>
+                    <div class="ipfield">
+                        <label>max price:</label>
+                        <input type="number" name="p_maxprice" value="<?php echo $parray['maxprice']; ?>" required>
                     </div>
                     
                 </div>
