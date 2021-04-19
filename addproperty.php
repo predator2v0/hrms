@@ -101,6 +101,8 @@
                 $pincode = mysqli_real_escape_string($con,$_POST['p_pincode']);
                 $regtype = mysqli_real_escape_string($con,$_POST['p_regtype']);
                 $roomcount = mysqli_real_escape_string($con,$_POST['p_roomcount']);
+                $minprice = mysqli_real_escape_string($con,$_POST['p_minprice']);
+                $maxprice = mysqli_real_escape_string($con,$_POST['p_maxprice']);
                 $oname = mysqli_real_escape_string($con,$_POST['o_name']);
                 $oemail = $_SESSION['email'];
                 // $oemail = mysqli_real_escape_string($con,$_POST['o_email']);
@@ -133,7 +135,7 @@
                     move_uploaded_file($pic2tmp,$store_path_2);
 
                     // upload and insert in db query
-                    $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount','$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
+                    $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,minprice,maxprice,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount',$minprice,$maxprice,'$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
 
                     // execute query
                     $query = mysqli_query($con,$insert_query);
@@ -207,7 +209,14 @@
                             <option value="threebhk">3 BHK</option>
                         </select>
                     </div>
-                    
+                    <div class="ipfield">
+                        <label>min price:</label>
+                        <input type="number" name="p_minprice" required>
+                    </div>
+                    <div class="ipfield">
+                        <label>max price:</label>
+                        <input type="number" name="p_maxprice" required>
+                    </div>
                 </div>
                 <div class="owner-info">
                     <h3>owner information</h3>
