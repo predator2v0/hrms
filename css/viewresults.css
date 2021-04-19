@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "akhand";
+    src: url("../fonts/akhand.otf");
+    font-weight: normal;
+    font-size: medium;
+}
+/* main content css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.viewresults-body {
+    color: #636e72;
+    font-family: "Epilogue", sans-serif;
+    background-color: #f4f9f9;
+}
+.viewresults-container {
+    width: 85%;
+    min-height: 400px;
+    margin: 20px auto;
+    padding: 5%;
+}
+.result-box {
+    width: 80%;
+    height: auto;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+}
+.property-img {
+    width: 200px;
+    height: auto;
+}
