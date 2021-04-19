@@ -115,7 +115,13 @@
                 $oemail = $_SESSION['email'];
                 // $oemail = mysqli_real_escape_string($con,$_POST['o_email']);
                 $ocontact = mysqli_real_escape_string($con,$_POST['o_contact']);
+                $temail = mysqli_real_escape_string($con,$_POST['t_email']);
                 
+                if($temail != null){
+                    $rstatus = 1;
+                }else{
+                    $rstatus = 0;
+                }
                 // input property images
                 // $pic1 = $_FILES['p_pic1'];
                 // $pic2 = $_FILES['p_pic2'];
@@ -146,7 +152,7 @@
                     // $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount','$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
 
                     // update query
-                    $update_query = "update property set pname = '$pname', locality = '$locality',landmark = '$landmark',city = '$city',state = '$state', pincode = '$pincode',regtype = '$regtype',roomcount = '$roomcount',minprice = $minprice,maxprice = $maxprice, oname = '$oname',oemail = '$oemail',ocontact = '$ocontact' where id = $updateid ";
+                    $update_query = "update property set pname = '$pname', locality = '$locality',landmark = '$landmark',city = '$city',state = '$state', pincode = '$pincode',regtype = '$regtype',roomcount = '$roomcount',minprice = $minprice,maxprice = $maxprice, oname = '$oname',oemail = '$oemail',ocontact = '$ocontact',rstatus = $rstatus,temail='$temail' where id = $updateid ";
                     // execute query
                     $query = mysqli_query($con,$update_query);
                     if($query){
@@ -257,6 +263,13 @@
                     <div class="ipfield">
                         <label>contact no:</label>
                         <input type="text" name="o_contact" value="<?php echo $_SESSION['contact']; ?>" required>
+                    </div>
+                </div>
+                <div class="owner-info">
+                    <h3>tenant information</h3>
+                    <div class="ipfield">
+                        <label>email:</label>
+                        <input type="email" name="t_email" value="<?php echo $parray['temail']; ?>">
                     </div>
                 </div>
                 <!-- <div class="property-image">
