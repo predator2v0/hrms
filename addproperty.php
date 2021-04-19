@@ -110,32 +110,32 @@
                 
                 // input property images
                 $pic1 = $_FILES['p_pic1'];
-                $pic2 = $_FILES['p_pic2'];
+                // $pic2 = $_FILES['p_pic2'];
                 // image validation
                 $pic1name = $pic1['name'];
-                $pic2name = $pic2['name'];
+                // $pic2name = $pic2['name'];
                 $pic1tmp = $pic1['tmp_name'];
-                $pic2tmp = $pic2['tmp_name'];
+                // $pic2tmp = $pic2['tmp_name'];
 
                 // extraction of the file extension
                 $legal_extensions = array('png','jpg','jpeg');
 
                 $extensionAr1 = explode('.',$pic1name);
-                $extensionAr2 = explode('.',$pic2name);
+                // $extensionAr2 = explode('.',$pic2name);
 
                 $extension1 = strtolower(end($extensionAr1));
-                $extension2 = strtolower(end($extensionAr2));
+                // $extension2 = strtolower(end($extensionAr2));
 
                 // check for match
-                if(in_array($extension1,$legal_extensions) && in_array($extension2,$legal_extensions)){
+                if(in_array($extension1,$legal_extensions)){
                     $store_path_1 = 'img/upload/'.$pic1name;
-                    $store_path_2 = 'img/upload/'.$pic2name;
+                    // $store_path_2 = 'img/upload/'.$pic2name;
 
                     move_uploaded_file($pic1tmp,$store_path_1);
-                    move_uploaded_file($pic2tmp,$store_path_2);
+                    // move_uploaded_file($pic2tmp,$store_path_2);
 
                     // upload and insert in db query
-                    $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,minprice,maxprice,oname,oemail,ocontact,pic1,pic2) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount',$minprice,$maxprice,'$oname','$oemail','$ocontact','$store_path_1','$store_path_2')";
+                    $insert_query = "insert into property (pname,locality,landmark,city,state,pincode,regtype,roomcount,minprice,maxprice,oname,oemail,ocontact,pic1) values('$pname','$locality','$landmark','$city','$state','$pincode','$regtype','$roomcount',$minprice,$maxprice,'$oname','$oemail','$ocontact','$store_path_1')";
 
                     // execute query
                     $query = mysqli_query($con,$insert_query);
@@ -239,10 +239,10 @@
                         <label>image 1:</label>
                         <input class="img-upload" type="file" name="p_pic1" required>
                     </div>
-                    <div class="ipfield">
+                    <!-- <div class="ipfield">
                         <label>image 2:</label>
                         <input class="img-upload" type="file" name="p_pic2" required>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="submit-reset">
                 <input type="submit" name="submit" value="register">
