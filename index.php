@@ -96,38 +96,34 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-10 col-12">
-                            <div class="main-text d-block">
+                            <div class="main-text">
                                 <p>
                                     find your dream house <br />
                                     <span>in an affordable price</span>
                                 </p>
-                                <button class="btn btn-primary">
-                                    View All
-                                </button>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-6 col-md-6 col-sm-10 col-12">
-                            <div class="login-form">
-                                <form action="" method="POST">
-                                    <h3>Login</h3>
+                        
+                        <div class="col-lg-6 col-md-6 col-sm-10 col-12">
+                            <div class="search-form form-group">
+                                <form action="viewresults.php" method="POST">
                                     <input
                                         type="text"
-                                        name="email"
-                                        placeholder="Username"
-                                    /><br />
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        placeholder="Password"
-                                    /><br />
+                                        maxlength="6"
+                                        name="pcode"
+                                        placeholder="pin code"
+                                        class="form-control"
+                                    />
                                     <input
                                         type="submit"
-                                        value="Login"
-                                        id="login-btn"
-                                    /><br />
+                                        name="submit"
+                                        value="search"
+                                        id="search-btn"
+                                        class="form-control"
+                                    />
                                 </form>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
