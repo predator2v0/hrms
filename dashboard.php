@@ -73,13 +73,24 @@
                                 >HELLO </a
                             >
                         </li> -->
-                        <li class="nav-item signup">
+                        <!-- <li class="nav-item signup">
                             <a
                                 href="logout.php"
                                 class="nav-link text-dark"
                                 >logout</a
                             >
-                        </li>
+                        </li> -->
+                        <div class="btn-group">
+                            <button class="btn btn-sm" type="button">
+                            <?php echo $_SESSION['name']; ?>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="logout.php">log out</a>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </div>
