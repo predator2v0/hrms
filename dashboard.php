@@ -140,20 +140,20 @@
                         echo $propertycount;
                     ?>
                 </h1>
-                <p>houses <span><a href="viewallproperty.php" target="_blank">view</a></span></p>
+                <p>houses <span><a href="viewallproperty.php" >view</a></span></p>
                 
             </div>
             <div class="booked">
                 <h1><?php
                         echo $bookedcount;
                     ?></h1>
-                <p>booked <span><a href="bookedproperty.php" target = "_blank">view</a></span></p>
+                <p>booked <span><a href="bookedproperty.php" >view</a></span></p>
             </div>
             <div class="rented">
                 <h1><?php
                         echo $rentedcount;
                     ?></h1>
-                <p>rented <span><a href="rentedproperty.php" target = "_blank">view</a></span></p>
+                <p>rented <span><a href="rentedproperty.php" >view</a></span></p>
             </div>
             <div class="tenants">
                 <h1><?php
