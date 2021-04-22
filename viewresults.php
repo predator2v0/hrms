@@ -58,28 +58,52 @@
                                 class="nav-link text-dark"
                                 >about us</a
                             >
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                href="#contact_us"
-                                class="nav-link text-dark"
-                                >contact us</a
-                            >
-                        </li>-->
-                        <li class="nav-item">
-                            <a
-                                href="dashboard.php"
-                                class="nav-link text-dark"
-                                >dashboard </a
-                            >
-                        </li> 
-                        <li class="nav-item signup">
-                            <a
-                                href="logout.php"
-                                class="nav-link text-dark"
-                                >logout</a
-                            >
-                        </li>
+                        </li> -->
+                        
+                        <?php
+                        if(isset($_SESSION['name'])){
+                            ?>
+                                <!-- <li class="nav-item">
+                                    <a
+                                        href="dashboard.php"
+                                        class="nav-link text-dark"
+                                        >dashboard </a
+                                    >
+                                </li> 
+                                <li class="nav-item signup">
+                                    <a
+                                        href="logout.php"
+                                        class="nav-link text-dark"
+                                        >logout</a
+                                    >
+                                </li> -->
+
+                                <div class="btn-group">
+                                    <button class="btn btn-sm" type="button">
+                                    <?php echo $_SESSION['name']; ?>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="dashboard.php">dashboard</a>
+                                        <a class="dropdown-item" href="logout.php">log out</a>
+                                    </div>
+                                </div>
+                            <?php
+                        } else{
+                            ?>
+                                <li class="nav-item">
+                                    <a
+                                        href="login.php"
+                                        class="nav-link text-dark"
+                                        >login</a
+                                    >
+                                </li>
+                            <?php
+                        }
+                        ?>
+                        
                     </ul>
                 </div>
             </div>
