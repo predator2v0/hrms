@@ -19,7 +19,7 @@
         $insert_query = "insert into contact_us(u_name, u_email, u_message) values('$u_name','$u_email','$u_message')";
         $res = mysqli_query($con,$insert_query);
 
-        header("Location: http://localhost/hrms/index.html");
+        header("Location: http://localhost/hrms/index.php");
     }
     }
   
