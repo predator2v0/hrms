@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -71,20 +74,59 @@
                                         >contact us</a
                                     >
                                 </li>
-                                <li class="nav-item">
-                                    <a
-                                        href="login.php"
-                                        class="nav-link text-dark"
-                                        >login</a
-                                    >
-                                </li>
-                                <li class="nav-item signup">
-                                    <a
-                                        href="register.php"
-                                        class="nav-link text-dark"
-                                        >register</a
-                                    >
-                                </li>
+                                <?php 
+                                    if(isset($_SESSION['name'])){
+                                        ?>
+                                            <!-- <li class="nav-item">
+                                                <a
+                                                    href="dashboard.php"
+                                                    class="nav-link text-dark"
+                                                    ><?php echo $_SESSION['name']; ?>
+                                                    </a
+                                                >
+                                            </li>
+                                            <li class="nav-item">
+                                                <a
+                                                    href="logout.php"
+                                                    class="nav-link text-dark"
+                                                    >log out
+                                                    </a
+                                                >
+                                            </li> -->
+
+                                            <div class="btn-group">
+                                                <button class="btn btn-sm" type="button">
+                                                <?php echo $_SESSION['name']; ?>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="dashboard.php">dashboard</a>
+                                                    <a class="dropdown-item" href="logout.php">log out</a>
+                                                </div>
+                                            </div>
+                                        <?php
+                                    }else{
+                                        ?>
+                                            <li class="nav-item">
+                                                <a
+                                                    href="login.php"
+                                                    class="nav-link text-dark"
+                                                    >login</a
+                                                >
+                                            </li>
+                                            <li class="nav-item signup">
+                                                <a
+                                                    href="register.php"
+                                                    class="nav-link text-dark"
+                                                    >register</a
+                                                >
+                                            </li>
+                                        <?php
+                                    }
+                                ?>
+                                
                             </ul>
                         </div>
                     </div>
