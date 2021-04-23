@@ -146,7 +146,7 @@
             <form action="" method="POST">
                 <h3>Login</h3>
                 <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="Username"
                 /><br />
@@ -161,7 +161,9 @@
                     value="Login"
                     id="login-btn"
                 /><br />
+                <a href="passwordlink.php">forgot password? reset it here</a>
             </form>
+            
         </div>
     <?php include 'footer.php'; ?>
 </body>
